@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <style>
+        hmtl,
+        body{
+            background-color: orangered;
+            font-size: 62.5%;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a{
+            text-decoration: none;
+            font-size: 1.4rem;
+            background-color: #fff;
+            color: orangered;
+            padding: 15px;
+            margin: 30px;
+            border-radius: 3px;
+            transition: background .2s, color .2s;
+            display: inline-block;
+        }
+        a:hover{
+            background-color: black;
+            color: #fff;
+        }
+        h1{
+            font-size: 3.0rem;
+        }
+        li{
+            font-size: 1.6rem;
+        }
+    </style>
+    <script>
+        var numero1 = parseInt(prompt("Jogador 1, digite um número: "));
+        var numero2 = parseInt(prompt("Jogador 2, digite um número: "));
+        var sorteio = parseInt(Math.random() * 2);
+        var menor_maior = false;
+
+        if (numero1 < numero2) {
+            menor_maior = true;
+        } else {
+            menor_maior = false;
+        }
+
+        if (numero1 == numero2) {
+            alert("Deu empate!");
+        } else {
+            if (sorteio == 0) {
+                alert("O Resultado do sorteio foi: " + sorteio);
+                if (menor_maior) {
+                    alert("O campeão foi: Jogador 1");
+                } else {
+                    alert("O campeão foi: Jogador 2");
+                }
+            } else {
+                alert("O Resultado do sorteio foi: " + sorteio);
+                if (menor_maior == false) {
+                    alert("O campeão foi: Jogador 1");
+                } else {
+                    alert("O campeão foi: Jogador 2");
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <a href="/Seção 42 - Variáveis e Operadores/index.html">Voltar</a>
+    <a href="/Seção 42 - Variáveis e Operadores/Aula516_exercicios.html">Recarregar</a>
+    <h1>Descrição do Exercício</h1>
+    <ul>
+        <li>fazer jogador 1 digitar um número</li>
+        <li>fazer jogador 2 digitar um número</li>
+        <li>se forem iguais, mostrar mensagem de empate</li>
+        <li>sortear um numero entre 0 e 1</li>
+        <li>se 0, ganha quem escolheu o MENOR numero</li>
+        <li>se 1, ganha quem escolheu o MAIOR numero</li>
+    </ul>
+</body>
+</html>

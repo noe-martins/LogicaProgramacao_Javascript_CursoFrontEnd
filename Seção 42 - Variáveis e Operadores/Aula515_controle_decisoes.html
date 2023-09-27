@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 5154 - Controle de decisões</title>
+    <style>
+        hmtl,
+        body{
+            background-color: orangered;
+            font-size: 62.5%;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a{
+            text-decoration: none;
+            font-size: 1.4rem;
+            background-color: #fff;
+            color: orangered;
+            padding: 15px;
+            margin: 30px;
+            border-radius: 3px;
+            transition: background .2s, color .2s;
+            display: inline-block;
+        }
+        a:hover{
+            background-color: black;
+            color: #fff;
+        }
+        h1{
+            font-size: 3.0rem;
+        }
+        li{
+            font-size: 1.6rem;
+        }
+    </style>
+    <script>
+        var numero1 = parseFloat(prompt("Digite o primeiro número: "));
+        var numero2 = parseFloat(prompt("Digite o segundo número: "));
+        var aprovacao = ((numero1 + numero2) / 2) >= 5;
+
+        if (aprovacao) {
+            alert("Aluno Aprovado");
+        } else {
+            alert("Aluno Reprovado");
+        }
+    </script>
+</head>
+<body>
+    <a href="/Seção 42 - Variáveis e Operadores/index.html">Voltar</a>
+    <h1>Descrição da Aula</h1>
+    <ul>
+        <li>pedir para o usuario digitar um numero</li>
+        <li>converter em numero float</li>
+        <li>pedir para o usuario digitar outro numero</li>
+        <li>converter em numero float</li>
+        <li>Informar se foi aprovado ou não (Note de corte é 5)</li>
+    </ul>
+</body>
+</html>
