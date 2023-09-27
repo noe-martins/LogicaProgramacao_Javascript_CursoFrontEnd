@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <style>
+        hmtl,
+        body{
+            background-color: orangered;
+            font-size: 62.5%;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a{
+            text-decoration: none;
+            font-size: 1.4rem;
+            background-color: #fff;
+            color: orangered;
+            padding: 15px;
+            margin: 30px;
+            border-radius: 3px;
+            transition: background .2s, color .2s;
+            display: inline-block;
+        }
+        a:hover{
+            background-color: black;
+            color: #fff;
+        }
+        h1{
+            font-size: 3.0rem;
+        }
+        li{
+            font-size: 1.6rem;
+        }
+    </style>
+    <script>
+        var numero1 = parseInt(prompt("Digite o primeiro número: "));
+        var numero2 = parseInt(prompt("Digite o segundo número: "));
+
+        alert("A Soma é: " + (numero1 + numero2) + 
+        "\nA Subtração é: " + (numero1-numero2) +
+        "\nA Multiplicação é: " + (numero1 * numero2) +
+        "\nA Divisão é: " + parseFloat((numero1/numero2)));
+    </script>
+</head>
+<body>
+    <a href="/index.html">Voltar</a>
+    <h1>Descrição do Exercício</h1>
+    <ul>
+        <li>pedir para o usuario digitar um numero</li>
+        <li>converter em numero inteiro</li>
+        <li>pedir para o usuario digitar outro numero</li>
+        <li>converter em numero inteiro</li>
+        <li>mostrar a subtração concatenando com o texto "a subtração é: ..."</li>
+        <li>mostrar a multiplicação concatenando com o texto "a multiplicação é: ..."</li>
+        <li>mostrar a divisão concatenando com o texto "a divisão é: ..."</li>
+        <li>mostrar a soma concatenando com o texto "a soma é: ..."</li>
+    </ul>
+</body>
+</html>
