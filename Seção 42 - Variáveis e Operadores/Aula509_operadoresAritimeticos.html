@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 505 - Variáveis em Javascript</title>
+    <title>Aula 509 - Operadores Aritiméticos</title>
     <style>
         hmtl,
         body{
@@ -27,20 +27,29 @@
             background-color: black;
             color: #fff;
         }
+        h1{
+            font-size: 3.0rem;
+        }
+        li{
+            font-size: 1.6rem;
+        }
     </style>
     <script>
-        // Tipos básicos de variáveis
-        var string = "Noé";
-        var inteiro = 1253;
-        var real = 12.5;
-        var bolleana = false;
-        // Comando para leitura de dados
-        var titulo_pagina = prompt("Digite um título para essa página: ");
-        // Comando para impressão de dados
-        alert("Esse é o título dessa página: " + titulo_pagina);
+        var numero1 = parseFloat(prompt("Digite o primeiro número: "));
+        var numero2 = parseFloat(prompt("Digite o segundo número: "));
+
+        alert("A Média é: " + (numero1 + numero2) / 2);
     </script>
 </head>
 <body>
     <a href="/Seção 42 - Variáveis e Operadores/index.html">Voltar</a>
+    <h1>Descrição da Aula</h1>
+    <ul>
+        <li>pedir para o usuario digitar um numero</li>
+        <li>converter em numero float</li>
+        <li>pedir para o usuario digitar outro numero</li>
+        <li>converter em numero float</li>
+        <li>mostrar a media</li>
+    </ul>
 </body>
 </html>

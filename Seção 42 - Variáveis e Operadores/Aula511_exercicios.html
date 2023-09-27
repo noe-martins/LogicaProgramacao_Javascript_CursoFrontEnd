@@ -37,11 +37,13 @@
     <script>
         var numero1 = parseInt(prompt("Digite o primeiro número: "));
         var numero2 = parseInt(prompt("Digite o segundo número: "));
+        var soma = numero1 + numero2;
+        var subtracao = numero1 - numero2;
 
-        alert("A Soma é: " + (numero1 + numero2) + 
-        "\nA Subtração é: " + (numero1-numero2) +
-        "\nA Multiplicação é: " + (numero1 * numero2) +
-        "\nA Divisão é: " + parseFloat((numero1/numero2)));
+        alert("O resto da divião é: " + (numero1 % numero2) +
+        "\nA potência dos primeiro elevado ao segundo é: " + (numero1 ** numero2) +
+        "\nO incremento de 1 à soma dos números é: " + (++soma) + 
+        "\nO descremento de 1 à subtração dos números é: " + (--subtracao));
     </script>
 </head>
 <body>
@@ -52,10 +54,10 @@
         <li>converter em numero inteiro</li>
         <li>pedir para o usuario digitar outro numero</li>
         <li>converter em numero inteiro</li>
-        <li>mostrar a subtração concatenando com o texto "a subtração é: ..."</li>
-        <li>mostrar a multiplicação concatenando com o texto "a multiplicação é: ..."</li>
-        <li>mostrar a divisão concatenando com o texto "a divisão é: ..."</li>
-        <li>mostrar a soma concatenando com o texto "a soma é: ..."</li>
+        <li>mostrar o resto da divisão dos dois numéros</li>
+        <li>mostrar o resultado do primeiro número elevado ao segundo número</li>
+        <li>mostrar o incremento de mais 1 a soma dos números</li>
+        <li>mostrar o decremento de menos 1 a subtração dos números</li>
     </ul>
 </body>
 </html>
