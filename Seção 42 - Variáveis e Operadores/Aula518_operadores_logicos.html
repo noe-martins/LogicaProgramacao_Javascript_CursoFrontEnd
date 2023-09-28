@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 518 - Operadores lógicos</title>
+    <style>
+        hmtl,
+        body{
+            background-color: orangered;
+            font-size: 62.5%;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a{
+            text-decoration: none;
+            font-size: 1.4rem;
+            background-color: #fff;
+            color: orangered;
+            padding: 15px;
+            margin: 30px;
+            border-radius: 3px;
+            transition: background .2s, color .2s;
+            display: inline-block;
+        }
+        a:hover{
+            background-color: black;
+            color: #fff;
+        }
+        h1{
+            font-size: 3.0rem;
+        }
+        li{
+            font-size: 1.6rem;
+        }
+    </style>
+    <script>
+        var numero1 = parseInt(prompt("Digite a primeira nota: "));
+        var numero2 = parseInt(prompt("Digite a segunda nota: "));
+        var media = ((numero1 + numero2) / 2) >= 5.00;
+
+        if (media && (numero1 > 0 && numero2 > 0)) {
+            alert("Aluno aprovado");
+        } else {
+            alert("Aluno reprovado");
+        }
+    </script>
+</head>
+<body>
+    <a href="/Seção 42 - Variáveis e Operadores/index.html">Voltar</a>
+    <a href="/Seção 42 - Variáveis e Operadores/Aula518_operadores_logicos.html">Recarregar</a>
+    <h1>Descrição do Exercício</h1>
+    <ul>
+        <li>Usuário digitar dois números</li>
+        <li>Informar de foi aprovado ou não (Nota de corte 5)</li>
+        <li>Ele só pode ter no máximo uma nota 0</li>
+    </ul>
+</body>
+</html>
