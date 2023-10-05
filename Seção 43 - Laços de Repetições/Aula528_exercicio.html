@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 523 - Exercícios</title>
+    <title>Aula 528 - Exercícios</title>
     <style>
         hmtl,
         body{
@@ -35,31 +35,17 @@
         }
     </style>
     <script>
-        const numero1 = parseInt(prompt("Digite um número de 1 a 3: "));
-
-        switch (numero1) {
-            case 1:
-                alert("Você digitou " + numero1);
-                break;
-            case 2:
-                alert("Você digitou " + numero1);
-                break;
-            case 3:
-                alert("Você digitou " + numero1);
-                break;
-            default:
-                alert("Número fora do Conjunto");
-                break;
-        }
+        for (let index = 1004; index <= 2017; index = index + 4) {
+            document.write(index + "<br>");
+        }  
     </script>
 </head>
 <body>
     <a href="/index.html">Voltar</a>
-    <a href="/Seção 42 - Variáveis e Operadores//Aula523_switch.html">Recarregar</a>
+    <a href="/Seção 43 - Laços de Repetições/Aula528_exercicio.html">Recarregar</a>
     <h1>Descrição do Exercício</h1>
     <ul>
-        <li>Pedir ao usuário para digitar número de 1 a 3</li>
-        <li>Aparecer uma mensagem para cada número</li>
+        <li>Mostre na tela todos os anos a partir de 1004 até o ano 2017, pulando de quatro em quatro anos.</li>
     </ul>
 </body>
 </html>

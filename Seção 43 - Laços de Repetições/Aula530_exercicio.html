@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 523 - Exercícios</title>
+    <title>Aula 530 - Exercícios</title>
     <style>
         hmtl,
         body{
@@ -35,31 +35,29 @@
         }
     </style>
     <script>
-        const numero1 = parseInt(prompt("Digite um número de 1 a 3: "));
-
-        switch (numero1) {
-            case 1:
-                alert("Você digitou " + numero1);
-                break;
-            case 2:
-                alert("Você digitou " + numero1);
-                break;
-            case 3:
-                alert("Você digitou " + numero1);
-                break;
-            default:
-                alert("Número fora do Conjunto");
-                break;
+        let index = 0;
+        while (index < 500) {
+            if( !(index % 100 === 0) || (index % 400 === 0)){
+                document.write(index + "<br>");
+            }
+            index += 4;
         }
     </script>
 </head>
 <body>
     <a href="/index.html">Voltar</a>
-    <a href="/Seção 42 - Variáveis e Operadores//Aula523_switch.html">Recarregar</a>
+    <a href="/Seção 43 - Laços de Repetições/Aula530_exercicio.html">Recarregar</a>
     <h1>Descrição do Exercício</h1>
     <ul>
-        <li>Pedir ao usuário para digitar número de 1 a 3</li>
-        <li>Aparecer uma mensagem para cada número</li>
+        <li>Para este exercicio aplique a lógica necessário para mostrar os anos que são realmente bissextos</li>
+        <li>
+            Regras:
+            <ul>
+                <li>Os anos bissextos são múltiplos de 4</li>
+                <li>Não múltiplos de 100</li>
+                <li>Múltiplos de 400</li>
+            </ul>
+        </li>
     </ul>
 </body>
 </html>
