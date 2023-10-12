@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 534 - Reaproveitamento de código</title>
+    <style>
+        hmtl,
+        body{
+            background-color: orangered;
+            font-size: 62.5%;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a{
+            text-decoration: none;
+            font-size: 1.4rem;
+            background-color: #fff;
+            color: orangered;
+            padding: 15px;
+            margin: 30px;
+            border-radius: 3px;
+            transition: background .2s, color .2s;
+            display: inline-block;
+        }
+        a:hover{
+            background-color: black;
+            color: #fff;
+        }
+        h1{
+            font-size: 3.0rem;
+        }
+        li{
+            font-size: 1.6rem;
+        }
+        div{
+            /* border: 2px solid blue; */
+            height: 200px;
+            width: 300px;
+            overflow:scroll;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <a href="/index.html">Voltar</a>
+    <h1>Descrição da Aula</h1>
+
+
+    <button onclick="mostrarTabuada()">Criar Tabuada</button>
+    <button onclick="limparTabuada()">Limpar Tabuada</button>
+    
+    <div id="output"></div>
+    <script>
+        var output = document.querySelector('#output');
+        var mensagem = '';
+        
+        function mostrarTabuada(){
+            const numero = parseInt(prompt("Digite um número para a tabuada: "));
+
+            limparTabuada();
+
+            for (let index = 1; index < 11; index++) {
+                mensagem += numero + " x " + index + " = " + (numero * index) + "<br>";
+            }
+
+            output.innerHTML = mensagem;
+        }
+        function limparTabuada() {
+            mensagem = '';
+            output.innerHTML = mensagem;
+        }
+
+    </script>
+
+    <ul>
+        <li>Pedir para o usuario digitar um número</li>
+        <li>Tabuada de 1 a 1000</li>
+        <li>Ter a possibilidade do usuário digitar outro</li>
+        <li>Ter a possibilidade de limpar a tabuada</li>
+    </ul>
+</body>
+</html>
