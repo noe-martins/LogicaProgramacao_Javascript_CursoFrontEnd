@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 541 - Melhorando a 538</title>
+    <style>
+        hmtl,
+        body{
+            background-color: orangered;
+            font-size: 62.5%;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a{
+            text-decoration: none;
+            font-size: 1.4rem;
+            background-color: #fff;
+            color: orangered;
+            padding: 15px;
+            margin: 30px;
+            border-radius: 3px;
+            transition: background .2s, color .2s;
+            display: inline-block;
+        }
+        a:hover{
+            background-color: black;
+            color: #fff;
+        }
+        h1{
+            font-size: 3.0rem;
+        }
+        li{
+            font-size: 1.6rem;
+        }
+        .externa{
+            /* border: 2px solid black; */
+            display: flex;
+            justify-content: center;
+        }
+        .interna{
+            /* border: 2px solid blue; */
+            height: 200px;
+            width: 300px;
+            font-size: 1rem;
+        }
+        .interna h1{
+            font-size: 4.0rem;
+            text-align: center;
+        }
+        .interna-button{
+            display: flex;
+            justify-content: space-between;
+        }
+        .interna-button button{
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <a href="/index.html">Voltar</a>
+    <h1>Descrição da Aula</h1>
+    
+    <div class="externa">
+        <div class="interna">
+            <div class="interna-button">
+                <button onclick="IniciarCalculo('+')">+</button>
+                <button onclick="IniciarCalculo('-')">-</button>
+                <button onclick="IniciarCalculo('*')">*</button>
+                <button onclick="IniciarCalculo('/')">/</button>
+            </div>
+            <h1 id="output"></h1>
+        </div>
+    </div>
+    <script>
+        let numero = parseFloat(prompt("Digite um número: "));
+        Escreve(numero);
+
+        function Escreve(mensagem) {
+            let output =  document.querySelector('#output');
+            output.innerHTML = mensagem;
+        }
+
+        function IniciarCalculo(simbolo) {
+            // Ele pega o valor que está no ID #output
+            // ".textContente = propriedade do elemento HTML selecionado. Acessa o conteúdo de texto (Por isso deve ser convertido)"
+            let numeroOutput = parseFloat(document.querySelector('#output').textContent);
+            let numeroOperante = parseFloat(prompt("Digite outro valor:"));
+            Escreve(Calcular(simbolo, numeroOutput, numeroOperante));
+        }
+
+        function Calcular(simbolo, number, operante) {
+            switch (simbolo) {
+                case '+':
+                    number += operante;
+                    break;
+                case '-':
+                    number -= operante;
+                    break;
+                case '*':
+                    number *= operante;
+                    break;
+                case '/':
+                    number /= operante;
+                    break;
+            }
+            return number;
+        }
+    </script>
+
+    <ul>
+        <li>Pedir para o usuario digitar um número</li>
+        <li>Apresentar botões das quatro operações aritiméticas com ele</li>
+        <li>Acumular o valor das operações</li>
+    </ul>
+</body>
+</html>

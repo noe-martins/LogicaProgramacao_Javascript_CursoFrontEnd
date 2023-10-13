@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 537 - Funções com parâmetros</title>
+    <style>
+        hmtl,
+        body{
+            background-color: orangered;
+            font-size: 62.5%;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a{
+            text-decoration: none;
+            font-size: 1.4rem;
+            background-color: #fff;
+            color: orangered;
+            padding: 15px;
+            margin: 30px;
+            border-radius: 3px;
+            transition: background .2s, color .2s;
+            display: inline-block;
+        }
+        a:hover{
+            background-color: black;
+            color: #fff;
+        }
+        h1{
+            font-size: 3.0rem;
+        }
+        li{
+            font-size: 1.6rem;
+        }
+        .externa{
+            /* border: 2px solid black; */
+            display: flex;
+            justify-content: center;
+
+        }
+        .interna{
+            /* border: 2px solid blue;2 */
+            height: 200px;
+            width: 100%;
+            font-size: 1rem;
+        }
+        .interna h1{
+            font-size: 4.0rem;
+            text-align: center;
+        }
+        .interna-button{
+            display: flex;
+            justify-content: center;
+        }
+        .interna-button button{
+            padding: 15px 20px;
+            cursor: pointer;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <a href="/index.html">Voltar</a>
+    <h1>Descrição da Aula</h1>
+    
+    <div class="externa">
+        <div class="interna">
+            <div class="interna-button">
+                <button onclick="MostrarArea(base, altura)">Mostrar área do retângulo</button>
+            </div>
+            <h1 id="output"></h1>
+        </div>
+    </div>
+    <script>
+        var output = document.querySelector('#output');
+        var base = parseFloat(prompt("Digite o valor da base: "));
+        var altura = parseFloat(prompt("Digite o valor da altura: "));
+        output.innerHTML = 0;
+
+        function MostrarArea(base, altura){
+            var areaTotal = base * altura;
+            output.innerHTML = "Área Total: " + areaTotal;
+        }
+
+    </script>
+
+    <ul>
+        <li>Pedir para o usuario digitar dois número que são os lados do Retângulo</li>
+        <li>Mostrar área total quando o botão for clicado</li>
+    </ul>
+</body>
+</html>
