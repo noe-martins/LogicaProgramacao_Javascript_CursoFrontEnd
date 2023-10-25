@@ -81,13 +81,21 @@
         }
 
         function CalculoArea(ladoA, ladoB) {
+            if (isNaN(ladoA) || isNaN(ladoB)) {
+                throw new Error('Valor do lado do retângulo não é válido');
+            }
             return (ladoA * ladoB);
         }
 
         function ExecucaoCalculo() {
             let ladoA = parseFloat(prompt("Digite um número para o lado A: "));
             let ladoB = parseFloat(prompt("Digite um número para o lado B: "));
-            Escreve(CalculoArea(ladoA, ladoB));
+            try {
+                Escreve(CalculoArea(ladoA, ladoB));
+            } catch (error) {
+                alert(error);
+                return;
+            }
         }
     </script>
 
