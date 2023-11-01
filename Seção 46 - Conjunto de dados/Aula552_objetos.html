@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 552 - Objetos e propriedades de objetos</title>
+    <style>
+        hmtl,
+        body{
+            background-color: orangered;
+            font-size: 62.5%;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a{
+            text-decoration: none;
+            font-size: 1.4rem;
+            background-color: #fff;
+            color: orangered;
+            padding: 15px;
+            margin: 30px;
+            border-radius: 3px;
+            transition: background .2s, color .2s;
+            display: inline-block;
+        }
+        a:hover{
+            background-color: black;
+            color: #fff;
+        }
+        h1{
+            font-size: 3.0rem;
+        }
+        li{
+            font-size: 1.6rem;
+        }
+        .externa{
+            /* border: 2px solid black; */
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .interna{
+            /* border: 2px solid blue; */
+            height: 200px;
+            width: 100%;
+            font-size: 1rem;
+            overflow-y: auto;
+        }
+        .interna h1{
+            font-size: 1.2rem;
+            text-align: center;
+        }
+        .interna-button{
+            display: flex;
+            justify-content: center;
+        }
+        .interna-button button{
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <a href="/index.html">Voltar</a>
+    <h1>Descrição da Aula</h1>
+    
+    <div class="externa">
+        <div class="interna">
+            <div class="interna-button">
+                <button onclick="comprarProduto()">Comprar produto</button>
+            </div>
+            <h1 id="output"></h1>
+        </div>
+    </div>
+    <script>
+        let lapis = new Object();
+        let output = document.querySelector('#output');
+
+        lapis.nome = 'Lapis';
+        lapis.quantidade = 100;
+        lapis.preco = 1.99;
+
+        lapis.comprar = function(qtd){
+            if (!qtd) {
+                qtd = 1;
+            }
+            this.quantidade = this.quantidade - qtd;
+            mostrar();
+            console.log(this.quantidade);
+        }
+
+        // Forma mais limpa porém exige mais 'pesada'
+        output.innerHTML = 'Produto: ' + lapis.nome + '<br>Quantidade: ' + lapis.quantidade + '<br>Preço: R$' + lapis.preco;
+
+        // Forma mais verbosa, porém mais 'leve'
+        mostrar();
+
+        //Funções
+        function mostrar(){
+            let msg = '';
+            msg += 'Produto: ' + lapis.nome + '<br>';
+            msg += 'Quantidade: ' + lapis.quantidade + '<br>';
+            msg += 'Preço: ' + lapis.preco + '<br>';
+            output.innerHTML = msg;
+        }
+
+        function comprarProduto(){
+            lapis.comprar(parseInt(prompt('Digite a quantidade que deseja comprar: ')));
+        }
+
+    </script>
+
+    <ul>
+        <li>Mostrar na tela todos os dados de um produto específico</li>
+        <li>Contendo Nome, Quantidade e Preço</li>
+        <li>Os dados estarão agrupados em um objeto</li>
+    </ul>
+</body>
+</html>
